@@ -1,0 +1,23 @@
+<table class="table table-primary table-striped table-hover col-md-8 mx-auto mt-3">
+    <tr>
+      <th>FLIGHT NUMBER</th>
+      <th>FLIGHT MODEL</th>
+      <th>CARRIER NAME</th>
+      <th>SEAT CAPACITY</th>
+    </tr>
+    <tr *ngFor="let flight of flights">
+      <td>{{flight.flightNumber}}</td>
+      <td>{{flight.flightModel}}</td>
+      <td>{{flight.carrierName}}</td>
+      <td>{{flight.seatCapacity}}</td>
+      <td><button class="btn btn-dark text-white" (click)="deleteFlight(flight.flightNumber)">Delete</button>&nbsp;&nbsp;&nbsp;</td>
+      <!-- <td><button class="btn btn-dark text-white" routerLink="/update" (click)="updateFlight(flight.flightNumber)">Update</button></td> -->
+    </tr>
+  </table>
+
+
+
+
+
+
+
