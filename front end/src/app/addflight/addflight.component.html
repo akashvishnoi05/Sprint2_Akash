@@ -1,0 +1,25 @@
+<h1>ADD FLIGHT</h1>
+<div>
+    <form #NgForm= "ngForm" novalidate (ngSubmit)="addFlight()">
+        <div class="form-group">
+            <label >Flight Number</label>
+            <input type="string" id="flightnumber"  placeholder="Flight Number"   name="aid"  #aid="ngModel" [(ngModel)]="flight.flightNumber" required pattern="[a-z]{1,20}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label >flight Model</label>
+            <input type="string" id="flightmodel" name="an" placeholder="flight Model" [(ngModel)]="flight.flightModel" class="form-control" #an="ngModel" required pattern="[a-z]{1,20}"><br>
+        </div>
+        <div class="form-group">
+            <label for="carrierName">carrier name</label>
+            <input type="string" id="carriername" name="al"   #al="ngModel" placeholder="carrier Name" [(ngModel)]="flight.carrierName" class="form-control"required pattern="[a-z]{1,20}">
+        </div>
+        <div class="form-group">
+            <label for="seatCapacity">seat capacity</label>
+            <input type="string" id="seatcapacity" name="ai"   #ai="ngModel" placeholder="seat Capacity" [(ngModel)]="flight.seatCapacity" class="form-control"required pattern="[a-z]{1,20}">
+        </div>
+        <div>
+            <!-- <input type="submit" value="addFlight"> -->
+            <button class="btn btn-dark text-success" (click)="addFlight">ADD FLIGHT</button>
+           </div>
+    </form>
+</div>
